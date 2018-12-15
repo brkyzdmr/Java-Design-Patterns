@@ -4,7 +4,7 @@
 This project covers the following patterns:
 
 #### Creational Patterns
-1. [Abstract Factory](/src/com/brkyzdmr/designpatterns/creational/abstractfactory/README.md)
+1. [Abstract Factory](/src/com/brkyzdmr/designpatterns/creational/abstractfactory/)
 2. Builder
 3. Factory Method
 4. Prototype
