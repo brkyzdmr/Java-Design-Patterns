@@ -3,14 +3,14 @@
 
 This project covers the following patterns:
 
-####Creational Patterns
-1. [Abstract Factory](../src/designpatterns/Creational/AbstractFactory)
+#### Creational Patterns
+1. [Abstract Factory](/src/com/brkyzdmr/designpatterns/creational/abstractfactory/README.md)
 2. Builder
 3. Factory Method
 4. Prototype
 5. Singleton
 
-####Structural Patterns
+#### Structural Patterns
 1. Adapter
 2. Bridge
 3. Composite
@@ -19,7 +19,7 @@ This project covers the following patterns:
 6. Flyweight
 7. Proxy
 
-####Behavioral Patterns
+#### Behavioral Patterns
 1. Chain of Responsibility
 2. Command
 3. Interpreter
