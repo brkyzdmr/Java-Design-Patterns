@@ -1,63 +1,100 @@
 @startuml
 
-title __DESIGNPATTERNS's Class Diagram__\n
+title __ABSTRACTFACTORY's Class Diagram__\n
 
   package com.brkyzdmr.designpatterns.creational.abstractfactory {
     class AbstractFactoryClient {
+        {static} + main()
     }
   }
   
 
   package com.brkyzdmr.designpatterns.creational.abstractfactory {
     class Ak47Factory {
+        + getMagazine()
+        + getScope()
     }
   }
   
 
   package com.brkyzdmr.designpatterns.creational.abstractfactory {
     class Ak47Magazine {
+        {static} - capasity : byte
+        {static} - currentAmmo : byte
+        + reload()
+        + fire()
+        + test()
     }
   }
   
 
   package com.brkyzdmr.designpatterns.creational.abstractfactory {
     class Ak47Scope {
+        {static} - isZoomed : boolean
+        + zoom()
+        + test()
     }
   }
   
 
   package com.brkyzdmr.designpatterns.creational.abstractfactory {
     abstract class Factory {
+        {static} - m4a1Factory : Factory
+        {static} - ak47Factory : Factory
+        {abstract} + getMagazine()
+        {abstract} + getScope()
+        {static} + getFactory()
+    }
+  }
+  
+
+  package com.brkyzdmr.designpatterns.creational.abstractfactory {
+    class UnknownWeaponException {
     }
   }
   
 
   package com.brkyzdmr.designpatterns.creational.abstractfactory {
     class M4a1Factory {
+        + getMagazine()
+        + getScope()
     }
   }
   
 
   package com.brkyzdmr.designpatterns.creational.abstractfactory {
     class M4a1Magazine {
+        {static} - capasity : byte
+        {static} - currentAmmo : byte
+        + reload()
+        + fire()
+        + test()
     }
   }
   
 
   package com.brkyzdmr.designpatterns.creational.abstractfactory {
     class M4a1Scope {
+        {static} - isZoomed : boolean
+        + zoom()
+        + test()
     }
   }
   
 
   package com.brkyzdmr.designpatterns.creational.abstractfactory {
     interface Magazine {
+        {abstract} + reload()
+        {abstract} + fire()
+        {abstract} + test()
     }
   }
   
 
   package com.brkyzdmr.designpatterns.creational.abstractfactory {
     interface Scope {
+        {abstract} + zoom()
+        {abstract} + test()
     }
   }
   
@@ -65,6 +102,7 @@ title __DESIGNPATTERNS's Class Diagram__\n
   Ak47Factory -up-|> Factory
   Ak47Magazine -up-|> Magazine
   Ak47Scope -up-|> Scope
+  Factory +-down- UnknownWeaponException
   M4a1Factory -up-|> Factory
   M4a1Magazine -up-|> Magazine
   M4a1Scope -up-|> Scope
